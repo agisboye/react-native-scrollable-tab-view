@@ -60,7 +60,7 @@ const DefaultTabBar = createReactClass({
   render() {
     const containerWidth = this.props.containerWidth;
     const numberOfTabs = this.props.tabs.length;
-    const tabUnderlineStyle = {
+    const defaultTabUnderlineStyle = {
       position: 'absolute',
       width: containerWidth / numberOfTabs,
       height: 4,
@@ -81,13 +81,13 @@ const DefaultTabBar = createReactClass({
         })}
         <Animated.View
           style={[
-            tabUnderlineStyle,
+            defaultTabUnderlineStyle,
             {
               transform: [
                 { translateX },
               ]
             },
-            this.props.tabBarUnderlineStyle,
+            this.props.underlineStyle,
           ]}
         />
       </View>
